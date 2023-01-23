@@ -1,20 +1,10 @@
-def isPrime(num):
-   for i in range(2, (num // 2) + 1, 1):
-      if num % i == 0:
-         return(False)
-   return(True)
-
 def lrgstPrimeFac(num):
-   for i in (primeList(num)).reverse():
-      if num % i == 0:
-         return(i)
-
-#
-def primeList(num):
-   list = []
-   for i in range(2, (num // 2) + 1, 1):
-      if isPrime(i):
-         list.append(i)
-   return(list)
-
-print(lrgstPrimeFac(131235))
+    list = []
+    fac = 2
+    while num > 1:
+        while num % fac == 0:
+            list.append(fac)
+            num = num // fac
+        fac = fac + 1
+    return list
+print(lrgstPrimeFac(600851475143))

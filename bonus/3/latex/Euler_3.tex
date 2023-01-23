@@ -7,32 +7,28 @@
 \Large
 \begin{document}
 \maketitle
-\large
-This document serves as a template of your solution of the bonus problem.\\
+
 
 \section*{Problem statement} 
-If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\\
+The prime factors of 13195 are 5, 7, 13 and 29.
 
-Find the sum of all the multiples of 3 or 5 below 1000.
+What is the largest prime factor of the number 600851475143 ?
 
 \section*{Answer}
-The sum is 233168.
-\section*{Idea} I checked all the numbers below 1000 and took the sum.
+The largest prime factor of 600851475143 = 6857
+\section*{Idea} Iterating up from factors starting at 2. If a number is divisible by the factor then we can divide the number by that factor before checking the next factor because the range [number/2 + 1, number] will not be divisible by anything. 
 
-\section*{Matlab code}
+\section*{Python code}
 \begin{verbatim}
-def isPrime(num):
-   for i in range(2, num // 2 + 1, 1):
-      if num % i == 0:
-         return(False)
-   return(True)
-
 def lrgstPrimeFac(num):
-   for i in range(num, 0, - 1):
-      if num % i == 0 and isPrime(i):
-         return(i)
-
-print(lrgstPrimeFac(13195))
-     
+    list = []
+    fac = 2
+    while num > 1:
+        while num % fac == 0:
+            list.append(fac)
+            num = num // fac
+        fac = fac + 1
+    return list
+print(lrgstPrimeFac(600851475143))
 \end{verbatim}
 \end{document}
