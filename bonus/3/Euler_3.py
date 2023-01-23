@@ -10,5 +10,10 @@ def lrgstPrimeFac(num):
       if num % i == 0 and isPrime(i):
          return(i)
 
-
-     
+#
+def primeList(num):
+   list = []
+   for i in range(0, (num // 2) + 1, 1):
+      if 
+      list.append()
+   return(list)
