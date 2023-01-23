@@ -5,9 +5,10 @@ def isPrime(num):
    return(True)
 
 def lrgstPrimeFac(num):
-   for i in range(num, 0, - 1):
+   for i in range((num // 2) + 1, 0, -1):
+      print(i)
       if num % i == 0 and isPrime(i):
          return(i)
 
-print(lrgstPrimeFac(13195))
+
      
