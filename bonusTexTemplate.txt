@@ -7,8 +7,6 @@
 \Large
 \begin{document}
 \maketitle
-\large
-This document serves as a template of your solution of the bonus problem.\\
 
 \section*{Problem statement} 
 If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.\\
@@ -19,7 +17,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 The sum is 233168.
 \section*{Idea} I checked all the numbers below 1000 and took the sum.
 
-\section*{Matlab code}
+\section*{Python code}
 \begin{verbatim}
 n = 1000;
 seq = 0;
